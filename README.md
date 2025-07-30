@@ -14,6 +14,7 @@ https://doi.org/10.1016/j.chemgeo.2023.121632
 A comprehensive and consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfate, phosphate, halide, and oxy-hydroxide minerals. Chemical Geology, 636, 121632.
 https://doi.org/10.1016/j.chemgeo.2024.122528
 
+
 📌 Use with PHREEQC via KINETICS blocks.  
 📎 See file header for references, usage instructions, and parameter definitions.
 
