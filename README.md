@@ -21,4 +21,4 @@ https://doi.org/10.1016/j.chemgeo.2024.122528
 ## Current Release
 
 - **KINEC_v3_3.dat** (Aug 29, 2025)  
-  - Fixed solid-solution kinetics operator (`*(SR` → `+(SR)`).
+  - Fixed solid-solution kinetics operator (`*(SR` → `+(SR`).
