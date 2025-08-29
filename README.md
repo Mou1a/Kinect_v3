@@ -21,4 +21,4 @@ https://doi.org/10.1016/j.chemgeo.2024.122528
 ## Current Release
 
 - **KINEC_v3_3.dat** (Aug 29, 2025)  
-  - Corrected calculation of the saturation state in solid-solution kinetics: '*(SR)' → '+(SR)'. (`*(SR` → `+(SR`).
+  - Corrected calculation of the saturation state in solid-solution kinetics: '*(SR)' → '+(SR)'. (`*(SR` → `+(SR`) and fixed control flow (line 4 now goes to 10 instead of 1000 or 100).
