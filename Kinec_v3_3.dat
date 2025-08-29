@@ -1,5 +1,5 @@
 # Kinec_v3_3.dat – last edited Aug 29, 2025 by MA and EHO.  
-# Update: corrected solid-solution kinetics operator: '*(SR)' → '+(SR)'.
+# Update: corrected calculation of the saturation state in solid-solution kinetics: '*(SR)' → '+(SR)'.
 #
 # This database contains the parameters for calculating mineral dissolution rates for primary and secondary silicate minerals using the equations and parameters reported by Hermanska et al. (2022, 2023),
 # and dissolution rates for other mineral systems using the equations and parameters reported by Oelkers and Addassi (2025).
@@ -12121,6 +12121,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
