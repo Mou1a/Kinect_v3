@@ -7890,7 +7890,7 @@ Andesine_ss#Ca0.4Na0.6Al1.4Si2.6O8 , M 268.613 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 268.613 else S = m0 * ((m/m0)^(2/3)) * 268.613 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Andesine=(SR ("Albite")*0.6)*(SR ("Anorthite")*0.4)
+10 SR_Andesine=(SR ("Albite")^0.6)*(SR ("Anorthite")^0.4)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -8087,7 +8087,7 @@ Augite_ss#Mg0.45Fe0.275Ca0.275SiO3;M 113.4  g/mol
    3 if PARM(3) = 0 then S = PARM(2) * m * 113.4 else S = m0 * ((m/m0)^(2/3)) * 113.4 * PARM(2)
    4 GOTO 10
    5 S = PARM(2)*TOT("water")
-   10 SR_Augite=(SR ("Wollastonite")*0.45)*(SR ("Ferrosilite")*0.275)*(SR ("Enstatite")*0.275)
+   10 SR_Augite=(SR ("Wollastonite")^0.45)*(SR ("Ferrosilite")^0.275)*(SR ("Enstatite")^0.275)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -8287,7 +8287,7 @@ Biotite_ss	#KFe1.5Mg1.5AlSi3O10(OH)2; M 464.564 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 464.564 else S = m0 * ((m/m0)^(2/3)) * 464.564 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Biotite=(SR ("Annite")*0.5)*(SR ("Phlogopite")*0.5)
+10 SR_Biotite=(SR ("Annite")^0.5)*(SR ("Phlogopite")^0.5)
 
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
@@ -8323,7 +8323,7 @@ Bronzite_ss#Mg0.77Fe0.23SiO3, M 107.6 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 107.6 else S = m0 * ((m/m0)^(2/3)) * 107.6 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Bronzite=(SR ("Enstatite")*0.77)*(SR ("Ferrosilite")*0.23)
+10 SR_Bronzite=(SR ("Enstatite")^0.77)*(SR ("Ferrosilite")^0.23)
 
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
@@ -8354,7 +8354,7 @@ Bytownite_ss#Ca0.77Na0.23Al1.77Si2.23O8, M 243.67 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 243.67 else S = m0 * ((m/m0)^(2/3)) * 243.67 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Bytownite=(SR ("Albite")*0.23)*(SR ("Anorthite")*0.77)
+10 SR_Bytownite=(SR ("Albite")^0.23)*(SR ("Anorthite")^0.77)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -9109,7 +9109,7 @@ Glaucophane_ss#Na2Mg3Al2Si8O22(OH)2, M 783.531 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 783.531 else S = m0 * ((m/m0)^(2/3)) * 783.531 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Glaucophane =((SR ("Anthophyllite")*1)*(SR ("Jadeite")*2))*(SR ("Enstatite")*(-4))
+10 SR_Glaucophane =((SR ("Anthophyllite")^1)*(SR ("Jadeite")^2))*(SR ("Enstatite")^(-4))
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -9242,7 +9242,7 @@ Hornblende_ss#Ca2(Mg4Al)(Si7Al)O22(OH)2, M 813.927 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 813.927 else S = m0 * ((m/m0)^(2/3)) * 813.927 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Hornblende =((SR ("Tremolite")*1)*(SR ("Corundum")*1))*(SR ("Enstatite")*(-1))
+10 SR_Hornblende =((SR ("Tremolite")^1)*(SR ("Corundum")^1))*(SR ("Enstatite")^(-1))
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -9472,7 +9472,7 @@ Labradorite_ss# Ca0.68Na0.32Al1.68Si2.32O8, M 245.84 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 245.84 else S = m0 * ((m/m0)^(2/3)) * 245.84 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Labradorite=(SR ("Albite")*0.32)*(SR ("Anorthite")*0.68)
+10 SR_Labradorite=(SR ("Albite")^0.32)*(SR ("Anorthite")^0.68)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -9495,7 +9495,6 @@ Labradorite_ss# Ca0.68Na0.32Al1.68Si2.32O8, M 245.84 g/mol
 2001 rplusn = An* (exp(-En/ (R * Tk))) * S
 2002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* (act("H+")^nb) * S 
 2009 rplus = rplusa + rplusn + rplusb
-2010 SR_Labradorite=(SR ("Albite")*0.32)*(SR ("Anorthite")*0.68)
 3000 rate = rplus * (1 - (SR_Labradorite^(1/Sig)))
 4000 moles = rate * time
 5000 save moles
@@ -10084,7 +10083,7 @@ Oligoclase_ss#Ca0.186Na0.814Al1.186Si2.814O8, M 265.2 g/mol
 3 if PARM(3) = 0 then S = PARM(2) * m * 265.2 else S = m0 * ((m/m0)^(2/3)) * 265.2 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Oligoclase=(SR ("Albite")*0.814)*(SR ("Anorthite")*0.186)
+10 SR_Oligoclase=(SR ("Albite")^0.814)*(SR ("Anorthite")^0.186)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -10118,7 +10117,7 @@ Olivine_ss#Mg1.8Fe0.2SiO4;M   147.31 g/mol
    3 if PARM(3) = 0 then S = PARM(2) * m * 147.31 else S = m0 * ((m/m0)^(2/3)) * 113.4 * PARM(2)
    4 GOTO 10
    5 S = PARM(2)*TOT("water")
-10 SR_Olivine=(SR ("Forsterite")*0.9)*(SR ("Fayalite")*0.1)
+10 SR_Olivine=(SR ("Forsterite")^0.9)*(SR ("Fayalite")^0.1)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -10349,7 +10348,7 @@ Riebeckite_ss#Na2Fe5Si8O22(OH)2, M 935.877 g/mol, kinetic parameters from tremol
 3 if PARM(3) = 0 then S = PARM(2) * m * 935.877 else S = m0 * ((m/m0)^(2/3)) * 935.877 * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
-10 SR_Riebeckite =((SR ("Wollastonite")*1)*(SR ("Jadeite")*2))*(SR ("Sillimanite")*(-2))
+10 SR_Riebeckite =((SR ("Wollastonite")^1)*(SR ("Jadeite")^2))*(SR ("Sillimanite")^(-2))
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -12121,6 +12120,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
