@@ -20,5 +20,6 @@ https://doi.org/10.1016/j.chemgeo.2024.122528
 
 ## Current Release
 
-- **KINEC_v3_3.dat** (Aug 31, 2025)  
-  - fixed control flow in solid-solution kinetics (line 4 now goes to 10 instead of 1000 or 100).
+- **KINEC_v3_3.dat** (Aug 31, 2025)
+  - Corrected solid-solution SR definitions by replacing '*' with '^' (exponents for end-member coefficients)
+  - Fixed control flow in solid-solution kinetics (line 4 now goes to 10 instead of 1000 or 100).
