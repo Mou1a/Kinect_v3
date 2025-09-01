@@ -1,4 +1,4 @@
-# Kinec_v3_3.dat – last edited Aug 29, 2025 by MA and EHO.
+# Kinec_v3.1.dat – last edited Aug 29, 2025 by MA and EHO.
 # Update: corrected solid-solution SR definitions by replacing '*' with '^' (exponents for end-member coefficients).
 # Update: fixed control flow in solid-solution kinetics  (line 4 now goes to 10 instead of 1000 or 100).
 # Update: added guard in SA calculation (line 3) to avoid zero-divide; uses fixed SA if m0 ≤ 0.
@@ -11722,7 +11722,7 @@ Aragonite   #CaCO3; M 100.0869 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Aragonite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11755,7 +11755,7 @@ Calcite   #CaCO3; M 100.0869 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Calcite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11788,7 +11788,7 @@ Cerussite   #PbCO3; M 267.2089 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Cerussite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11820,7 +11820,7 @@ Dawsonite # NaAlCO3(OH)2 : M 144.0 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Dawsonite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11852,7 +11852,7 @@ Dolomite # CaMg(CO3)2: M 184.40 g/mol !!!
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Dolomite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11885,7 +11885,7 @@ Gaspeite # NiCO3: M 118.702 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Gaspeite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11918,7 +11918,7 @@ Magnesite # MgCO3: M 84.314 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Magnesite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11951,7 +11951,7 @@ Otavite # CdCO3: M 172.419 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Otavite")^(1/Sig)) 
 5000 moles = rate * time
@@ -11983,7 +11983,7 @@ Rhodochrosite #MnCO3  : M 114.95 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Rhodochrosite")^(1/Sig)) 
 5000 moles = rate * time
@@ -12015,7 +12015,7 @@ Siderite # FeCO3: M 115.856 g/mol !!!
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Siderite")^(1/Sig)) 
 5000 moles = rate * time
@@ -12048,7 +12048,7 @@ Smithsonite # ZnCO3: M 125.399 g/mol  !!!
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Smithsonite")^(1/Sig)) 
 5000 moles = rate * time
@@ -12081,7 +12081,7 @@ Strontianite # ZnCO3: M 125.399 g/mol
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Strontianite")^(1/Sig)) 
 5000 moles = rate * time
@@ -12114,7 +12114,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
-2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term
+2001 rplusc = Ac* (exp(-Eac/ (R * Tk)))*carb_term * S
 2002 rplus = rplusa + rplusc
 4000 rate = rplus * (1 - SR("Witherite")^(1/Sig)) 
 5000 moles = rate * time
@@ -12122,6 +12122,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
