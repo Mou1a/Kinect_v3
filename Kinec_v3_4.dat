@@ -1,7 +1,5 @@
-# Kinec_v3_4.dat – last edited Aug 29, 2025 by MA and EHO.
-# Update: corrected solid-solution SR definitions by replacing '*' with '^' (exponents for end-member coefficients).
-# Update: fixed control flow in solid-solution kinetics  (line 4 now goes to 10 instead of 1000 or 100).
-# Update: added guard in SA calculation (line 3) to avoid zero-divide; uses fixed SA if m0 ≤ 0.
+# Kinec_v3_4.dat – last edited Sep 01, 2025 by MA and EHO.
+
 #
 # This database contains the parameters for calculating mineral dissolution rates for primary and secondary silicate minerals using the equations and parameters reported by Hermanska et al. (2022, 2023),
 # and dissolution rates for other mineral systems using the equations and parameters reported by Oelkers and Addassi (2025).
@@ -10,7 +8,12 @@
 # The thermodynamic data for Gaspeite, Variscite were taken from https://thermoddem.brgm.fr/ and Monazite-Ce was extracted from (A.P. Gysi et al. / Geochimica et Cosmochimica Acta 242 (2018))
 #
 # Several solid solutions have been added to the kinetics database to properly address the release of metals from solid solutions.  The solubilities of these solid solutions are based on the ideal mechanical mixing of the endmembers. These solid solutions are indicated by the suffix: _ss
-#
+
+# Updates in this revision:
+# • Solid-solution SR definitions: replaced '*' with '^' for exponents on end-member coefficients.
+# • Solid-solution kinetics control flow: corrected jump target (line 4 now goes to 10, not 100/1000).
+# • Surface-area (SA) guard: added check to avoid divide-by-zero; uses fixed SA if m0 ≤ 0.
+# • Carbonate rate expressions: corrected missing surface-area factor; r_plus_c now multiplied by S.
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # README for the RATES blocks in the Kinec.v2.dat file
 
@@ -12122,6 +12125,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
