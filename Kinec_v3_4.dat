@@ -7890,9 +7890,9 @@ Andalusite#Al2SiO5, M 162.9 g/mol
 
 Andesine_ss#Ca0.4Na0.6Al1.4Si2.6O8 , M 268.613 g/mol
 -start
-1 name$ = "Andesine_ss"
+1 Molar_mass = 268.613
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 268.613 else S = m0 * ((m/m0)^(2/3)) * 268.613 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Andesine=(SR ("Albite")^0.6)*(SR ("Anorthite")^0.4)
@@ -8088,11 +8088,12 @@ Antigorite	#Mg3Si2O5(OH4); M 277 g/mol
 
 Augite_ss#Mg0.45Fe0.275Ca0.275SiO3;M 113.4  g/mol   
 -start
-   2 if PARM(1) = 0 then  goto 3 else goto 5
-   3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 113.4 else S = m0 * ((m/m0)^(2/3)) * 113.4 * PARM(2)
-   4 GOTO 10
-   5 S = PARM(2)*TOT("water")
-   10 SR_Augite=(SR ("Wollastonite")^0.45)*(SR ("Ferrosilite")^0.275)*(SR ("Enstatite")^0.275)
+1 Molar_mass = 113.4
+2 if PARM(1) = 0 then  goto 3 else goto 5
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
+4 GOTO 10
+5 S = PARM(2)*TOT("water")
+10 SR_Augite=(SR ("Wollastonite")^0.45)*(SR ("Ferrosilite")^0.275)*(SR ("Enstatite")^0.275)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
@@ -8288,8 +8289,9 @@ Beidellite-Na# Na.35Al2.35Si3.65O10(OH)2 ; M 368.0 g/mol # listed as SMECTITE in
 
 Biotite_ss	#KFe1.5Mg1.5AlSi3O10(OH)2; M 464.564 g/mol
 -start
+1 Molar_mass = 464.564
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 464.564 else S = m0 * ((m/m0)^(2/3)) * 464.564 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Biotite=(SR ("Annite")^0.5)*(SR ("Phlogopite")^0.5)
@@ -8324,8 +8326,9 @@ Biotite_ss	#KFe1.5Mg1.5AlSi3O10(OH)2; M 464.564 g/mol
 
 Bronzite_ss#Mg0.77Fe0.23SiO3, M 107.6 g/mol
 -start
+1 Molar_mass = 107.6
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 107.6 else S = m0 * ((m/m0)^(2/3)) * 107.6 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Bronzite=(SR ("Enstatite")^0.77)*(SR ("Ferrosilite")^0.23)
@@ -9110,8 +9113,9 @@ Glass_Rhyolite#SiAl0.23Na0.13Fe0.05K0.05Ca0.03Mg0.007Ti0.004O2.536; M 84.165 g/m
 
 Glaucophane_ss#Na2Mg3Al2Si8O22(OH)2, M 783.531 g/mol
 -start
+1 Molar_mass = 783.531
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 783.531 else S = m0 * ((m/m0)^(2/3)) * 783.531 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Glaucophane =((SR ("Anthophyllite")^1)*(SR ("Jadeite")^2))*(SR ("Enstatite")^(-4))
@@ -9243,8 +9247,9 @@ Heulandite-Na# Na2Al2Si7O18:5H2O
 
 Hornblende_ss#Ca2(Mg4Al)(Si7Al)O22(OH)2, M 813.927 g/mol
 -start
+1 Molar_mass = 813.927
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 813.927 else S = m0 * ((m/m0)^(2/3)) * 813.927 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Hornblende =((SR ("Tremolite")^1)*(SR ("Corundum")^1))*(SR ("Enstatite")^(-1))
@@ -9473,8 +9478,9 @@ Larnite   #Ca2SiO4;M 172.237 g/mol
 
 Labradorite_ss# Ca0.68Na0.32Al1.68Si2.32O8, M 245.84 g/mol
 -start
+1 Molar_mass = 245.84
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 245.84 else S = m0 * ((m/m0)^(2/3)) * 245.84 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Labradorite=(SR ("Albite")^0.32)*(SR ("Anorthite")^0.68)
@@ -10084,8 +10090,9 @@ Nontronite-Na# Na.35Fe2Al.35Si3.65H2O12; M 425.7 g/mol # listed as SMECTITE in D
 
 Oligoclase_ss#Ca0.186Na0.814Al1.186Si2.814O8, M 265.2 g/mol
 -start
+1 Molar_mass = 265.2
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 265.2 else S = m0 * ((m/m0)^(2/3)) * 265.2 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Oligoclase=(SR ("Albite")^0.814)*(SR ("Anorthite")^0.186)
@@ -10118,10 +10125,11 @@ Oligoclase_ss#Ca0.186Na0.814Al1.186Si2.814O8, M 265.2 g/mol
 
 Olivine_ss#Mg1.8Fe0.2SiO4;M   147.31 g/mol   
 -start
-   2 if PARM(1) = 0 then  goto 3 else goto 5
-   3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 147.31 else S = m0 * ((m/m0)^(2/3)) * 113.4 * PARM(2)
-   4 GOTO 10
-   5 S = PARM(2)*TOT("water")
+1 Molar_mass = 147.31
+2 if PARM(1) = 0 then  goto 3 else goto 5
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
+4 GOTO 10
+5 S = PARM(2)*TOT("water")
 10 SR_Olivine=(SR ("Forsterite")^0.9)*(SR ("Fayalite")^0.1)
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
@@ -10349,8 +10357,9 @@ Quartz#SiO2; M 60.08 g/mol
 
 Riebeckite_ss#Na2Fe5Si8O22(OH)2, M 935.877 g/mol, kinetic parameters from tremolite
 -start
+1 Molar_mass = 935.877
 2 if PARM(1) = 0 then  goto 3 else goto 5
-3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 935.877 else S = m0 * ((m/m0)^(2/3)) * 935.877 * PARM(2)
+3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * Molar_mass else S = m0 * ((m/m0)^(2/3)) * Molar_mass * PARM(2)
 4 GOTO 10
 5 S = PARM(2)*TOT("water")
 10 SR_Riebeckite =((SR ("Wollastonite")^1)*(SR ("Jadeite")^2))*(SR ("Sillimanite")^(-2))
@@ -12125,6 +12134,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
