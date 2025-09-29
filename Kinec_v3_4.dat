@@ -2,7 +2,7 @@
 
 #
 # This database contains the parameters for calculating mineral dissolution rates for primary and secondary silicate minerals using the equations and parameters reported by Hermanska et al. (2022, 2023),
-# and dissolution rates for other mineral systems using the equations and parameters reported by Oelkers and Addassi (2025).
+# and dissolution rates for other mineral systems using the equations and parameters reported by Oelkers and Addassi (2025a). The overall database structure and examples are described in Oelkers and Addassi (2025b).
 #
 # This database contains thermodynamic properties from the Carbfix.dat (Voigt et al., 2018) and the llnl.dat database. 
 # The thermodynamic data for Gaspeite, Variscite were taken from https://thermoddem.brgm.fr/ and Monazite-Ce was extracted from (A.P. Gysi et al. / Geochimica et Cosmochimica Acta 242 (2018))
@@ -57,13 +57,15 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # References for KINEC_v3.dat database description: 
-#Hermanska M., Voigt M. J., Marieni C., Declercq J., and Oelkers E. H. (2022) A comprehensive and internally consistent mineral dissolution rate database: Part I: Primary silicate minerals and glasses. Chemical Geology. 597, 120807. https://doi.org/10.1016/j.chemgeo.2022.120807
+#Hermanska M., Voigt M. J., Marieni C., Declercq J., and Oelkers E. H. (2022). A comprehensive and internally consistent mineral dissolution rate database: Part I: Primary silicate minerals and glasses. Chemical Geology. 597, 120807. https://doi.org/10.1016/j.chemgeo.2022.120807
 #
-#Hermanska M., Voigt M. J., Marieni C., Declercq J., and Oelkers E. H. (2023) A comprehensive and internally consistent mineral dissolution rate database: Part II: Secondary silicate minerals. Chemical Geology. 636, 121632 https://doi.org/10.1016/j.chemgeo.2023.121632
+#Hermanska M., Voigt M. J., Marieni C., Declercq J., and Oelkers E. H. (2023). A comprehensive and internally consistent mineral dissolution rate database: Part II: Secondary silicate minerals. Chemical Geology. 636, 121632 https://doi.org/10.1016/j.chemgeo.2023.121632
+#
+# Oelkers, E.H., Addassi, M. (2025a). A comprehensive and consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfate, phosphate, halide, and oxy-hydroxide minerals. Chemical Geology, 673, 122528. https://doi.org/10.1016/j.chemgeo.2024.122528
 #
 # and 
-#
-# Oelkers, E.H., Addassi, M. 2024. A comprehensive and internally consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfide, phosphate, halide, and oxy-hydroxide minerals. (in preperation)
+# 
+# Oelkers, E.H., Addassi, M. (2025b). Kinec_v3: A computer database for the calculation of the dissolution rates of the major rock forming minerals. Chemical Geology, 695, 123041. https://doi.org/10.1016/j.chemgeo.2025.123041 
 # *********************************************************************
 #
 # Thermodynamics from carbfix.dat (Voigt et al., 2018).
@@ -12134,6 +12136,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
