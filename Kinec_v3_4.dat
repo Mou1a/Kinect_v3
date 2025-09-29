@@ -1,4 +1,4 @@
-# Kinec_v3_4.dat – last edited Sep 01, 2025 by MA and EHO.
+# Kinec_v3_4.dat – last edited Sep 29, 2025 by MA and EHO.
 
 #
 # This database contains the parameters for calculating mineral dissolution rates for primary and secondary silicate minerals using the equations and parameters reported by Hermanska et al. (2022, 2023),
@@ -12136,6 +12136,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 -end
 	
 ###!
+
 
 
 
