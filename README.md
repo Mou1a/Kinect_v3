@@ -10,10 +10,13 @@ https://doi.org/10.1016/j.chemgeo.2022.120807
 A comprehensive and internally consistent mineral dissolution rate database: Part II: Secondary silicate minerals. Chemical Geology, 636, 121632.
 https://doi.org/10.1016/j.chemgeo.2023.121632
 
-3- Oelkers, E.H., Addassi, M. (2025).
-A comprehensive and consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfate, phosphate, halide, and oxy-hydroxide minerals. Chemical Geology, 636, 121632.
+3- Oelkers, E.H., Addassi, M. (2025a).
+A comprehensive and consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfate, phosphate, halide, and oxy-hydroxide minerals. Chemical Geology, 673, 122528.
 https://doi.org/10.1016/j.chemgeo.2024.122528
 
+4- Oelkers, E.H., Addassi, M. (2025a).
+Kinec_v3: A computer database for the calculation of the dissolution rates of the major rock forming minerals. Chemical Geology, 695, 123041.
+https://doi.org/10.1016/j.chemgeo.2025.123041
 
 📌 Use with PHREEQC via KINETICS blocks.  
 📎 See file header for references, usage instructions, and parameter definitions.
