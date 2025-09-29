@@ -14,7 +14,7 @@ https://doi.org/10.1016/j.chemgeo.2023.121632
 A comprehensive and consistent mineral dissolution rate database: Part III: Non-silicate minerals including carbonate, sulfate, phosphate, halide, and oxy-hydroxide minerals. Chemical Geology, 673, 122528.
 https://doi.org/10.1016/j.chemgeo.2024.122528
 
-4- Oelkers, E.H., Addassi, M. (2025a).
+4- Oelkers, E.H., Addassi, M. (2025b).
 Kinec_v3: A computer database for the calculation of the dissolution rates of the major rock forming minerals. Chemical Geology, 695, 123041.
 https://doi.org/10.1016/j.chemgeo.2025.123041
 
