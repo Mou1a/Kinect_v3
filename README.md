@@ -1,4 +1,4 @@
-# Kinec_v3.dat
+# Kinec_v3_5.dat
 
 Thermodynamic and kinetic database for use in PHREEQC, combining data from Carbfix.dat, llnl.dat, and curated kinetic parameters from:
 
