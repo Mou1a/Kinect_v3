@@ -19,6 +19,8 @@
 # • K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable
 #   in the base-mechanism rate, ACTI^(nC) → ACTI^(nb).
 # • Ferroactinolite: removed duplicate line 5.
+# • Almandine, Andradite, Grossular: Sig was numbered 10010; renumbered to 1010.
+# • Clinoptilolite-Ca: repaired rate expression split across two line; restored the missing ^(1/Sig) exponent.
 # • Full version history is maintained in the repository README.
 
 # Updates in the C3_4 revision:
@@ -7820,7 +7822,7 @@ Almandine#Fe3Al2(SiO4)3, M 500.4 g/mol
 1007 Eb = 42300  
 1008 R =  8.314 #J.deg-1.mol-1
 1009 ACTI = act("H+")
-10010 Sig = 3
+1010 Sig = 3
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
 2003 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
@@ -7958,7 +7960,7 @@ Andradite#Ca3Fe2(SiO4)3, M 510.9 g/mol
 1006 En = 43200  
 1008 R =  8.314 #J.deg-1.mol-1
 1009 ACTI = act("H+")
-10010 Sig = 3
+1010 Sig = 3
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
 2003 rplusn = An* (exp(-En/ (R * Tk)))* S
@@ -8669,8 +8671,7 @@ Clinoptilolite-Ca# Ca1.5Al3Si15O36:12H2O
 2001 rplusn = An* (exp(-En/ (R * Tk))) * S
 2002 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(act("H+")^nb )* S
 2009 rplus = rplusa + rplusn +rplusb
-3000 rate = rplus * (1 - (SR ("Clinoptilolite-Ca")
-/Sig))
+3000 rate = rplus * (1 - (SR ("Clinoptilolite-Ca")^(1/Sig)))
 4000 moles = rate * time
 5000 save moles
 -end
@@ -9180,7 +9181,7 @@ Grossular#Ca3Al2(SiO4)3, M 453 g/mol
 1007 Eb = 42300  
 1008 R =  8.314 #J.deg-1.mol-1
 1009 ACTI = act("H+")
-10010 Sig = 3
+1010 Sig = 3
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
 2003 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
