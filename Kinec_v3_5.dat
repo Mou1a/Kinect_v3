@@ -10,11 +10,17 @@
 # Several solid solutions have been added to the kinetics database to properly address the release of metals from solid solutions.  The solubilities of these solid solutions are based on the ideal mechanical mixing of the endmembers. These solid solutions are indicated by the suffix: _ss
 
 # Updates in this revision (v3_5):
-# • Corrected BASIC control-flow and line-numbering errors in several RATES
-#   blocks (invalid GOTO targets, duplicate line numbers, and out-of-order
-#   parameter definitions).
-# • Fixed undefined/misnamed rate variables and a rate expression that had
-#   been split across two lines.
+# BASIC / structural fixes:
+# • Corrected invalid GOTO targets, duplicate line numbers, and out-of-order
+#   parameter definitions in several RATES blocks; fixed a misnamed rate
+#   variable (nC -> nb) and a rate expression that had been split across two lines.
+# Rate-parameter corrections (cross-checked vs Heřmanská 2022/2023 and
+# Oelkers & Addassi 2025):
+# • Wollastonite basic A 20 -> 200; Dolomite K_c 160 -> 5000;
+#   Strontianite A_c 8.89 -> 2.44e-2; Witherite K_c 160 -> 60;
+#   Illite & Paragonite neutral A -> 3.84e-3;
+#   Laumontite & Leonhardite A -> 0.221 / 1.56e-4 / 4.94e-5 (match chabazite);
+#   Andalusite & Kyanite activation energies set to the Table 1 (epidote) values.
 # • See the repository README for the full, per-mineral changelog.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
