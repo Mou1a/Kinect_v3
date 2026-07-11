@@ -32,6 +32,9 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
   - K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable in
     the base-mechanism rate, `ACTI^(nC)` → `ACTI^(nb)`.
   - Ferroactinolite: removed duplicate line 5.
+  - Almandine, Andradite, Grossular: Sig was numbered 10010; renumbered to 1010.
+  - Clinoptilolite-Ca: repaired rate expression split across two line; restored the missing ^(1/Sig) exponent.
+
 
 ## Previous Releases
 - **Kinec_v3_4.dat** (Sep 01, 2025)
