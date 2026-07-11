@@ -9060,7 +9060,7 @@ Glass_Basalt#SiTi0.02Al0.36Fe0.19Mg0.28Ca0.26Na0.08K0.008O3.364 , M 122.566 g/mo
 -start
 2 if PARM(1) = 0 then  goto 3 else goto 5
 3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 122.566 else S = m0 * ((m/m0)^(2/3)) * 122.566 * PARM(2)
-4 GOTO 10
+4 GOTO 100
 5 S = PARM(2)*TOT("water")
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
@@ -9087,7 +9087,7 @@ Glass_Rhyolite#SiAl0.23Na0.13Fe0.05K0.05Ca0.03Mg0.007Ti0.004O2.536; M 84.165 g/m
 -start
 2 if PARM(1) = 0 then  goto 3 else goto 5
 3 if PARM(3) = 0 or m0 <= 0 then S = PARM(2) * m * 84.165 else S = m0 * ((m/m0)^(2/3)) * 84.165 * PARM(2)
-4 GOTO 10
+4 GOTO 100
 5 S = PARM(2)*TOT("water")
 ##-----------------Dissolution and precipitation options---------------------##
 100  if (PARM(4) = 0) then  goto 1000 else goto 110 
