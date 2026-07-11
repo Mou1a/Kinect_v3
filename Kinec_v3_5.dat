@@ -23,11 +23,6 @@
 # • Clinoptilolite-Ca: repaired rate expression split across two line; restored the missing ^(1/Sig) exponent.
 # • Full version history is maintained in the repository README.
 
-# Updates in the C3_4 revision:
-# • Solid-solution SR definitions: replaced '*' with '^' for exponents on end-member coefficients.
-# • Solid-solution kinetics control flow: corrected jump target (line 4 now goes to 10, not 100/1000).
-# • Surface-area (SA) guard: added check to avoid divide-by-zero; uses fixed SA if m0 ≤ 0.
-# • Carbonate rate expressions: corrected missing surface-area factor; r_plus_c now multiplied by S.
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # README for the RATES blocks in the Kinec.v2.dat file
 
