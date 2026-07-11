@@ -10,18 +10,12 @@
 # Several solid solutions have been added to the kinetics database to properly address the release of metals from solid solutions.  The solubilities of these solid solutions are based on the ideal mechanical mixing of the endmembers. These solid solutions are indicated by the suffix: _ss
 
 # Updates in this revision (v3_5):
-# • Glass_Basalt kinetics: corrected jump target, line 4 GOTO 10 → GOTO 100
-#   (line 10 did not exist).
-# • Halite kinetics: parameter block relabelled 1001 → 1000 so the
-#   'goto 1000' targets resolve).
-# • Andalusite, Kyanite: removed duplicate line 1001 (Sig moved to 1010);
-#   previously An was overwritten and the neutral mechanism was dropped.
-# • K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable
-#   in the base-mechanism rate, ACTI^(nC) → ACTI^(nb).
-# • Ferroactinolite: removed duplicate line 5.
-# • Almandine, Andradite, Grossular: Sig was numbered 10010; renumbered to 1010.
-# • Clinoptilolite-Ca: repaired rate expression split across two line; restored the missing ^(1/Sig) exponent.
-# • Full version history is maintained in the repository README.
+# • Corrected BASIC control-flow and line-numbering errors in several RATES
+#   blocks (invalid GOTO targets, duplicate line numbers, and out-of-order
+#   parameter definitions).
+# • Fixed undefined/misnamed rate variables and a rate expression that had
+#   been split across two lines.
+# • See the repository README for the full, per-mineral changelog.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # README for the RATES blocks in the Kinec.v2.dat file
