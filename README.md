@@ -24,9 +24,9 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
 ## Current Release
 - **Kinec_v3_5.dat** (Jul 11, 2026)
   - Glass_Basalt kinetics: corrected jump target, line 4 `GOTO 10` → `GOTO 100`
-    (line 10 did not exist, causing a fatal "Undefined line" error).
+    (line 10 did not exist).
   - Halite kinetics: parameter block relabelled 1001 → 1000 so the `goto 1000`
-    targets resolve (was a dangling jump).
+    targets resolve.
   - Andalusite, Kyanite: removed duplicate line 1001 (Sig moved to 1010);
     previously `An` was overwritten and the neutral mechanism was dropped.
   - K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable in
