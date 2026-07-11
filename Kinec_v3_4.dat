@@ -7878,7 +7878,7 @@ Andalusite#Al2SiO5, M 162.9 g/mol
 1007 Eb = 50000 
 1008 R =  8.314 #J.deg-1.mol-1
 1009 ACTI = act("H+")
-1001 Sig = 1
+1010 Sig = 1
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
 2003 rplusn = An* (exp(-En/ (R * Tk)))* S
@@ -9005,7 +9005,6 @@ Ferroactinolite #Ca2Fe5Si8O22(OH)2, M 970.053 g/mol, kinetic parameters from Tre
 110 if (PARM(4) = 1) Then GoTo 150 else goto 200 # 
 150 If (SR (name$) < 1) Then GoTo 5000 else GoTO 1000 # warning no dissolution reaction
 200 If (SR (name$) > 1) Then GoTo 5000 else GoTO 1000 # warning no precipitation reaction#
-5 S = PARM(2)*TOT("water")
 ##------------------Kinetic calculation---------------------##
 		# parameters
 1000 Aa = 3.0e-3   #mol.m-2.s-1
@@ -9406,7 +9405,7 @@ K-Feldspar #KAlSi3O8; M 278.33 g/mol
 		#Rate Equation
 3000 rplusa = Aa * ACTI^nA * exp (-Ea/ (R * Tk)) * S
 3001 rplusn = An * exp (-En/ (R * Tk)) * S
-3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nC) * S
+3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nb) * S
 3003 rplus = rplusa + rplusn + rplusb
 4000 rate = rplus * (1 - SR("K-Feldspar")^(1/Sig))
 5000 moles = rate * time
@@ -9437,7 +9436,7 @@ Kyanite# Al2SiO5, M 162.9 g/mol
 1007 Eb = 50000
 1008 R =  8.314 #J.deg-1.mol-1
 1009 ACTI = act("H+")
-1001 Sig = 1
+1010 Sig = 1
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
 2003 rplusn = An* (exp(-En/ (R * Tk)))* S
@@ -9640,7 +9639,7 @@ Maximum_Microcline #KAlSi3O8; M 278.33 g/mol
 		#Rate Equation
 3000 rplusa = Aa * ACTI^nA * exp (-Ea/ (R * Tk)) * S
 3001 rplusn = An * exp (-En/ (R * Tk)) * S
-3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nC) * S
+3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nb) * S
 3003 rplus = rplusa + rplusn + rplusb
 4000 rate = rplus * (1 - SR("Maximum_Microcline")^(1/Sig))
 5000 moles = rate * time
@@ -10416,7 +10415,7 @@ Sanidine_high #KAlSi3O8; M 278.33 g/mol, kinetic parameters from K-feldspar in D
 		#Rate Equation
 3000 rplusa = Aa * ACTI^nA * exp (-Ea/ (R * Tk)) * S
 3001 rplusn = An * exp (-En/ (R * Tk)) * S
-3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nC) * S
+3002 rplusb = Ab* (exp(-Eb/ (R * Tk)))* ACTI^(nb) * S
 3003 rplus = rplusa + rplusn + rplusb
 4000 rate = rplus * (1 - SR("Sanidine_high")^(1/Sig))
 5000 moles = rate * time
