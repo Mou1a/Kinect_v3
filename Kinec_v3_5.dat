@@ -9295,7 +9295,7 @@ Illite# K0.6Mg0.25Al1.8Al0.5Si3.5O10(OH)2
 ##------------------Kinetic calculation---------------------##
         #Parameters
 1000 Aa = 7.3e-4 #mol.m-2.s-1
-1001 An = 3.348e-3	#mol.m-2.s-1 
+1001 An = 3.84e-3	#mol.m-2.s-1 
 1002 Ab = 6.0e-8 #mol.m-2.s-1
 1003 Ea = 50000 #J.mol-1
 1004 En = 70000	#J.mol-1
@@ -9529,9 +9529,9 @@ Laumontite# CaAl2Si4O12:4.5H2O
 200 If (SR (name$) > 1) Then GoTo 5000 else GoTO 1000 # warning no precipitation reaction#
 ##------------------Kinetic calculation---------------------##
         #Parameters
-1000 Aa = 0.25 #mol.m-2.s-1
-1001 An = 1.39e-3	#mol.m-2.s-1 
-1002 Ab = 7.5e-6 #mol.m-2.s-1
+1000 Aa = 0.221 #mol.m-2.s-1
+1001 An = 1.56e-4	#mol.m-2.s-1 
+1002 Ab = 4.94e-5 #mol.m-2.s-1
 1003 Ea = 33700 #J.mol-1
 1004 En = 44200	#J.mol-1
 1005 Eb = 44200	#J.mol-1
@@ -9593,9 +9593,9 @@ Leonhardite# CaAl2Si4O12:3.5H2O
 200 If (SR (name$) > 1) Then GoTo 5000 else GoTO 1000 # warning no precipitation reaction#
 ##------------------Kinetic calculation---------------------##
         #Parameters
-1000 Aa = 0.25 #mol.m-2.s-1
-1001 An = 1.39e-3	#mol.m-2.s-1 
-1002 Ab = 7.5e-6 #mol.m-2.s-1
+1000 Aa = 0.221 #mol.m-2.s-1
+1001 An = 1.56e-4	#mol.m-2.s-1 
+1002 Ab = 4.94e-5 #mol.m-2.s-1
 1003 Ea = 33700 #J.mol-1
 1004 En = 44200	#J.mol-1
 1005 Eb = 44200	#J.mol-1
@@ -10173,7 +10173,7 @@ Paragonite # NaAl3Si3O10(OH)2
 ##------------------Kinetic calculation---------------------##
         #Parameters
 1000 Aa = 7.3e-4 #mol.m-2.s-1
-1001 An = 3.48e-3	#mol.m-2.s-1 
+1001 An = 3.84e-3	#mol.m-2.s-1 
 1002 Ab = 6.0e-8 #mol.m-2.s-1
 1003 Ea = 50000 #J.mol-1
 1004 En = 70000	#J.mol-1
@@ -11137,7 +11137,7 @@ Wollastonite#CaSiO3;M 117.1 g/mol
 ##------------------Kinetic calculation---------------------##
 		# parameters
 1000 Aa = 700 #mol.m-2.s-1 
-1001 Ab = 20 #mol.m-2.s-1  
+1001 Ab = 200 #mol.m-2.s-1  
 1003 Ea = 56000 #J.mol-1
 1004 Eb = 52000 #J.mol-1
 1006 R =  8.314 #J.deg-1.mol-1
@@ -11863,7 +11863,7 @@ Dolomite # CaMg(CO3)2: M 184.40 g/mol !!!
 1004 R = 8.314 #J.deg-1.mol-1
 1006 Sig = 1.9  
 1007 na =0.5
-1008 kc =160	
+1008 kc =5000	
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
@@ -12086,7 +12086,7 @@ Strontianite # ZnCO3: M 125.399 g/mol
 ##------------------Kinetic calculation---------------------##
 		#Parameters
 1000 Aa =2.2e-3# mol.m-2.s-1
-1001 Ac = 8.89 # mol.m-2.s-1
+1001 Ac = 2.44e-2 # mol.m-2.s-1
 1002 Ea =16000# J/mol
 1003 Eac =48000# J/mol
 1004 R = 8.314 #J.deg-1.mol-1
@@ -12125,7 +12125,7 @@ Witherite # BaCO3: M 197.349 g/mol !!!
 1004 R = 8.314 #J.deg-1.mol-1
 1006 Sig = 1
 1007 na =1
-1008 kc =160	
+1008 kc =60	
 1009 act_c = act("HCO3-")+act("CO3-2")
 1010 carb_term = 1-(kc*act_c)/(1+kc*act_c)
 2000 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(act("H+")^na)* S
