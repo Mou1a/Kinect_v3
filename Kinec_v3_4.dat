@@ -11573,7 +11573,7 @@ Halite #NaCl : M 58.44 g/mol
 200 If (SR (name$) > 1) Then GoTo 5000 else GoTO 1000 # warning no precipitation reaction
 ##------------------Kinetic calculation---------------------##
 		# parameters
-1001 An = 3.3e-4 #mol.m-2.s-1
+1000 An = 3.3e-4 #mol.m-2.s-1
 1004 En = -22340    #J.mol-1
 1006 R =  8.314    #J.deg-1.mol-1
 1007 ACTI = ACT ("H+")
