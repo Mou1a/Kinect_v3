@@ -22,7 +22,18 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
 📎 See file header for references, usage instructions, and parameter definitions.
 
 ## Current Release
+- **Kinec_v3_5.dat** (Jul 11, 2026)
+  - Glass_Basalt kinetics: corrected jump target, line 4 `GOTO 10` → `GOTO 100`
+    (line 10 did not exist, causing a fatal "Undefined line" error).
+  - Halite kinetics: parameter block relabelled 1001 → 1000 so the `goto 1000`
+    targets resolve (was a dangling jump).
+  - Andalusite, Kyanite: removed duplicate line 1001 (Sig moved to 1010);
+    previously `An` was overwritten and the neutral mechanism was dropped.
+  - K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable in
+    the base-mechanism rate, `ACTI^(nC)` → `ACTI^(nb)`.
+  - Ferroactinolite: removed duplicate line 5.
 
+## Previous Releases
 - **Kinec_v3_4.dat** (Sep 01, 2025)
   - Corrected solid-solution SR definitions by replacing '*' with '^' (exponents for end-member coefficients)
   - Fixed control flow in solid-solution kinetics (line 4 now goes to 10 instead of 1000 or 100).
