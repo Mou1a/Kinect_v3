@@ -22,18 +22,35 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
 📎 See file header for references, usage instructions, and parameter definitions.
 
 ## Current Release
-- **Kinec_v3_5.dat** (Jul 11, 2026)
-  - Glass_Basalt kinetics: corrected jump target, line 4 `GOTO 10` → `GOTO 100`
-    (line 10 did not exist).
-  - Halite kinetics: parameter block relabelled 1001 → 1000 so the `goto 1000`
-    targets resolve.
-  - Andalusite, Kyanite: removed duplicate line 1001 (Sig moved to 1010);
-    previously `An` was overwritten and the neutral mechanism was dropped.
-  - K-Feldspar, Maximum_Microcline, Sanidine_high: fixed undefined variable in
-    the base-mechanism rate, `ACTI^(nC)` → `ACTI^(nb)`.
+- **Kinec_v3_5.dat** (Jul 2026)
+
+  BASIC / structural fixes:
+  - Glass_Basalt: corrected jump target, line 4 `GOTO 10` → `GOTO 100`.
+  - Halite: parameter block relabelled 1001 → 1000 so `goto 1000` resolves.
+  - Andalusite, Kyanite: removed duplicate line 1001 (Sig moved to 1010).
+  - K-Feldspar, Maximum_Microcline, Sanidine_high: `ACTI^(nC)` → `ACTI^(nb)`.
   - Ferroactinolite: removed duplicate line 5.
-  - Almandine, Andradite, Grossular: Sig was numbered 10010; renumbered to 1010.
-  - Clinoptilolite-Ca: repaired rate expression split across two line; restored the missing ^(1/Sig) exponent.
+  - Almandine, Andradite, Grossular: Sig renumbered 10010 → 1010 (was used
+    before defined, causing a 1/Sig divide-by-zero).
+  - Clinoptilolite-Ca: repaired a rate expression split across two lines;
+    restored the missing `^(1/Sig)` exponent.
+
+  Rate-parameter corrections (cross-checked against Heřmanská et al. 2022, 2023
+  and Oelkers & Addassi 2025, tables and text):
+  - Wollastonite: basic A 20 → 200 mol m⁻² s⁻¹ (dropped zero).
+  - Dolomite: aqueous-carbonate K_c 160 → 5000.
+  - Strontianite: carbonate A_c 8.89 → 2.44×10⁻² (had Smithsonite's value).
+  - Witherite: aqueous-carbonate K_c 160 → 60.
+  - Illite: neutral A 3.348×10⁻³ → 3.84×10⁻³.
+  - Paragonite: neutral A 3.48×10⁻³ → 3.84×10⁻³ (paper sets its parameters
+    equal to illite).
+  - Laumontite, Leonhardite: acid/neutral/basic A → 0.221 / 1.56×10⁻⁴ /
+    4.94×10⁻⁵, matching chabazite (paper sets these zeolites equal to the
+    average of heulandite and scolecite).
+  - Andalusite, Kyanite: activation energies corrected to the Table 1
+    (epidote-based) values — Andalusite 60/43.2/42.3, Kyanite 60/43.2/50
+    kJ mol⁻¹; the database had inherited anorthite's Ea from a Table 11 note
+    (confirmed with E. Oelkers).
 
 
 ## Previous Releases
