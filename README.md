@@ -34,6 +34,8 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
     before defined, causing a 1/Sig divide-by-zero).
   - Clinoptilolite-Ca: repaired a rate expression split across two lines;
     restored the missing `^(1/Sig)` exponent.
+  - Glass_Basalt kinetics: fixed fatal Basic syntax error `go to` -> `goto`
+    (line 1000; triggered only when m0 <= 0).
 
   Rate-parameter corrections (cross-checked against Heřmanská et al. 2022, 2023
   and Oelkers & Addassi 2025, tables and text):
