@@ -16,6 +16,8 @@
 #   variable (nC -> nb) and a rate expression that had been split across two lines.
 # Rate-parameter corrections (cross-checked vs Heřmanská 2022/2023 and
 # Oelkers & Addassi 2025):
+# • Almandine, Grossular: neutral-mechanism parameters (An, En) were defined but
+#   missing from the rate sum; added rplusn to rplus 
 # • Wollastonite basic A 20 -> 200; Dolomite K_c 160 -> 5000;
 #   Strontianite A_c 8.89 -> 2.44e-2; Witherite K_c 160 -> 60;
 #   Illite & Paragonite neutral A -> 3.84e-3;
@@ -7820,8 +7822,9 @@ Almandine#Fe3Al2(SiO4)3, M 500.4 g/mol
 1010 Sig = 3
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
-2003 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
-2009 rplus = rplusa + rplusb
+2003 rplusn = An* (exp(-En/ (R * Tk)))* S
+2004 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
+2009 rplus = rplusa + rplusn + rplusb
 3000 rate = rplus * (1 - (SR("Almandine")^(1/Sig)))
 4000 moles = rate * time
 5000 save moles
@@ -9179,8 +9182,9 @@ Grossular#Ca3Al2(SiO4)3, M 453 g/mol
 1010 Sig = 3
 		#rate equations
 2002 rplusa = Aa* (exp(-Ea/ (R * Tk)))*(ACTI^na)* S
-2003 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
-2009 rplus = rplusa + rplusb
+2003 rplusn = An* (exp(-En/ (R * Tk)))* S
+2004 rplusb = Ab* (exp(-Eb/ (R * Tk)))*(ACTI^nb)* S
+2009 rplus = rplusa + rplusn + rplusb
 3000 rate = rplus * (1 - (SR("Grossular")^(1/Sig)))
 4000 moles = rate * time
 5000 save moles
