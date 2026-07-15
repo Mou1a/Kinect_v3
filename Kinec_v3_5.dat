@@ -9079,7 +9079,7 @@ Glass_Basalt#SiTi0.02Al0.36Fe0.19Mg0.28Ca0.26Na0.08K0.008O3.364 , M 122.566 g/mo
 200 If (SR ("Glass_Basalt_leached_layer") > 1) Then GoTo 5000 else GoTO 1000 # warning no precipitation reaction#
 ##------------------Kinetic calculation---------------------##
 		# parameters
-1000 if (m0<=0) then go to 5000
+1000 if (m0<=0) then goto 5000
 1001 Aa = 1.08e-4	#mol.m-2.s-1
 1003 Ea = 21500	#J.mol-1
 1006 R = 8.3144 #J.deg-1.mol-1
