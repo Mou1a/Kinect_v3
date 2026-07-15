@@ -37,6 +37,7 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
 
   Rate-parameter corrections (cross-checked against Heřmanská et al. 2022, 2023
   and Oelkers & Addassi 2025, tables and text):
+  - Almandine, Grossular: neutral-mechanism parameters (An, En) were defined but missing from the rate sum; added rplusn to rplus 
   - Wollastonite: basic A 20 → 200 mol m⁻² s⁻¹ (dropped zero).
   - Dolomite: aqueous-carbonate K_c 160 → 5000.
   - Strontianite: carbonate A_c 8.89 → 2.44×10⁻² (had Smithsonite's value).
