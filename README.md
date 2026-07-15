@@ -21,6 +21,10 @@ https://doi.org/10.1016/j.chemgeo.2025.123041
 📌 Use with PHREEQC via KINETICS blocks.  
 📎 See file header for references, usage instructions, and parameter definitions.
 
+## Preview — Kinec_BET (beta)
+
+A compact, table-driven restructuring of this database is available in the [beta/](beta/) folder: same thermodynamic data and rate parameters, with the rate laws written once in CALCULATE_VALUES and a one-line parameter stub per mineral (see beta/README.md and table_Oelkers_BET.csv). Verified against Kinec_v3_5 for all 135 minerals — machine-precision agreement. Feedback welcome via Issues.
+
 ## Current Release
 - **Kinec_v3_5.dat** (Jul 2026)
 
